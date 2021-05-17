@@ -1,10 +1,12 @@
 const express = require("express");
 const Attempts = require("./models").attempts;
 const app = express();
+const cors = require("cors");
 const PORT = 4000;
 
 //middleware
 app.use(express.json());
+app.use(cors());
 
 //get all
 app.get("/", async (req, res) => {
@@ -58,6 +60,22 @@ app.put("/:id", async (req, res, next) => {
     }
   } catch (e) {
     next(e);
+  }
+});
+
+//delete
+app.delete("/", async (req, res) => {
+  try {
+    const deletedStory = await Attempts.destroy({
+      where: {},
+    });
+
+    return res.status(200).send({
+      message: " deleted successfully!",
+    });
+  } catch (error) {
+    console.log(error.message);
+    return res.status(400).send({ message: "Something went wrong, sorry" });
   }
 });
 
