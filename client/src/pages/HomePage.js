@@ -10,6 +10,7 @@ export default function HomePage() {
   const [counter, setCounter] = useState(maxAttempts);
   const [list, setList] = useState([]);
   const [alert, setAlert] = useState(false);
+  console.log(randomNumber);
 
   //refresh the page delete the DB, set inicial state
   const deleteData = counter === 3 && list.length > 0 ? deleteDB() : null;

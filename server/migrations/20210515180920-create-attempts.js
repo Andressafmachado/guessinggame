@@ -8,15 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      user: {
-        type: Sequelize.STRING,
-      },
-      attempt: {
-        type: Sequelize.INTEGER,
-      },
-      randomNumber: {
-        type: Sequelize.INTEGER,
-      },
+
       userGuess: {
         type: Sequelize.INTEGER,
       },

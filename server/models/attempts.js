@@ -13,9 +13,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   attempts.init(
     {
-      user: DataTypes.STRING,
-      attempt: DataTypes.INTEGER,
-      randomNumber: DataTypes.INTEGER,
       userGuess: DataTypes.INTEGER,
     },
     {
