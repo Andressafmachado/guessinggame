@@ -10,7 +10,6 @@ export default function HomePage() {
   const [counter, setCounter] = useState(maxAttempts);
   const [list, setList] = useState([]);
   const [alert, setAlert] = useState(false);
-  console.log(randomNumber);
 
   //refresh the page delete the DB, set inicial state
   const deleteData = counter === 3 && list.length > 0 ? deleteDB() : null;
@@ -94,7 +93,7 @@ export default function HomePage() {
     if (winner) {
       setCounter(0);
     }
-  }, [winner]);
+  }, [alert]);
 
   //game logic
   const game = () => {
@@ -119,7 +118,6 @@ export default function HomePage() {
       return (
         <div>
           <img src={gameover} alt="gameOver" width="40%" />
-          {/* <h2> sorry, you lost </h2> */}
           <form onSubmit={deleteDB}>
             <button id="button" type="submit">
               play again
