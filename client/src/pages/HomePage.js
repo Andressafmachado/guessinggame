@@ -41,6 +41,7 @@ export default function HomePage() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
       },
       body: JSON.stringify({ userGuess: item }),
     }).then((data) => data.json(item));
@@ -52,6 +53,7 @@ export default function HomePage() {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
       },
       body: JSON.stringify(),
     }).then((data) => data.json());
@@ -92,7 +94,7 @@ export default function HomePage() {
     if (winner) {
       setCounter(0);
     }
-  }, [alert]);
+  }, [winner]);
 
   //game logic
   const game = () => {
@@ -116,7 +118,7 @@ export default function HomePage() {
     } else if (counter <= 0 && !winner) {
       return (
         <div>
-          <img src={gameover} width="40%" />
+          <img src={gameover} alt="gameOver" width="40%" />
           {/* <h2> sorry, you lost </h2> */}
           <form onSubmit={deleteDB}>
             <button id="button" type="submit">
