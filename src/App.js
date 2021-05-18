@@ -5,7 +5,6 @@ import HomePage from "./pages/HomePage";
 function App() {
   return (
     <div className="App">
-      {/* <NavBar /> */}
       <Switch>
         <Route path="/" component={HomePage} exact />
       </Switch>

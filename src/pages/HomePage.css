@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+/* font-family: "Roboto Mono", monospace; */
+
+.HomePage {
+  align-self: center;
+  text-align: center;
+  background-color: rgb(36, 143, 129);
+  font-family: "Roboto Mono", monospace;
+  font-size: 130%;
+  display: flex;
+  flex-direction: column;
+  margin: 10% 30% 10% 30%;
+  border: rgb(16, 16, 17) solid 4px;
+  border-radius: 5%;
+  color: black;
+}
+
+.title {
+  padding-top: 10px;
+}
+
+.game {
+  background-color: rgb(42, 187, 168);
+  padding-bottom: 10%;
+  border-radius: 0 0 6% 6%;
+}
+
+#input {
+  background-color: rgb(72, 230, 209);
+  border: solid black 1px;
+  padding: 1%;
+  font-size: 100%;
+  width: 20%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#button {
+  background-color: rgb(36, 143, 129);
+  padding: 1%;
+  margin: 1%;
+  border: black solid 2px;
+  font-size: 80%;
+  font-family: "Roboto Mono", monospace;
+  border-radius: 5px;
+}
+
+#message {
+  font-size: 70%;
+}
+
+#wrongmessage {
+  color: red;
+}
+
+#warning {
+  color: red;
+  font-size: 75%;
+}
+
+#won {
+  background-color: rgb(36, 143, 129);
+  padding: 2%;
+  margin: 5%;
+  border-radius: 5px;
+  border: solid 2px black;
+}
